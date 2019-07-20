@@ -1,7 +1,7 @@
 About r-modeldb
 ===============
 
-Home: https://github.com/edgararuiz/modeldb
+Home: https://github.com/tidymodels/modeldb
 
 Package license: GPL-3
 
