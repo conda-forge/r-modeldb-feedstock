@@ -31,6 +31,7 @@ requirements:
     - r-purrr
     - r-rlang
     - r-tibble
+    - r-tidypredict
   run:
     - r-base
     - r-dplyr >=0.7
@@ -39,14 +40,15 @@ requirements:
     - r-purrr
     - r-rlang
     - r-tibble
-
+    - r-tidypredict
+    
 test:
   commands:
     - $R -e "library('modeldb')"           # [not win]
     - "\"%R%\" -e \"library('modeldb')\""  # [win]
 
 about:
-  home: https://github.com/edgararuiz/modeldb
+  home: https://github.com/tidymodels/modeldb
   license: GPL-3
   summary: Uses 'dplyr' and 'tidyeval' to fit statistical models inside the database. It currently
     supports KMeans and linear regression models.
