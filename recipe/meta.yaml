@@ -1,4 +1,4 @@
-{% set version = '0.1.2' %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/modeldb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/modeldb/modeldb_{{ version }}.tar.gz
-  sha256: 74792f6f7695c873accb3fd4b5b3437a283cc5eb46e6c52eb3f096ab57bf0d00
+  sha256: edf1c5ec493fff0e1967eefe821f2e276bae6b568c12dc7f053db417c6ae8fe1
 
 build:
   merge_build_host: True  # [win]
@@ -31,6 +31,7 @@ requirements:
     - r-purrr
     - r-rlang
     - r-tibble
+    - r-tidypredict
   run:
     - r-base
     - r-dplyr >=0.7
@@ -39,14 +40,15 @@ requirements:
     - r-purrr
     - r-rlang
     - r-tibble
-
+    - r-tidypredict
+    
 test:
   commands:
     - $R -e "library('modeldb')"           # [not win]
     - "\"%R%\" -e \"library('modeldb')\""  # [win]
 
 about:
-  home: https://github.com/edgararuiz/modeldb
+  home: https://github.com/tidymodels/modeldb
   license: GPL-3
   summary: Uses 'dplyr' and 'tidyeval' to fit statistical models inside the database. It currently
     supports KMeans and linear regression models.
