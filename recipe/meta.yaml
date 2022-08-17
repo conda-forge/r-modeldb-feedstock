@@ -1,4 +1,4 @@
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/modeldb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/modeldb/modeldb_{{ version }}.tar.gz
-  sha256: cbe9ca388d63f085033e0eb740c792966309f4588173cb3a0964775c00ec4893
+  sha256: 6f3c05d0520743851f29a9f88f10093639bb12902763224984f11c6a886635b7
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -41,7 +41,7 @@ requirements:
     - r-rlang
     - r-tibble
     - r-tidypredict
-    
+
 test:
   commands:
     - $R -e "library('modeldb')"           # [not win]
@@ -50,10 +50,9 @@ test:
 about:
   home: https://github.com/tidymodels/modeldb
   license: GPL-3
-  summary: Uses 'dplyr' and 'tidyeval' to fit statistical models inside the database. It currently
-    supports KMeans and linear regression models.
+  summary: Uses 'dplyr' and 'tidyeval' to fit statistical models inside the database. It currently supports KMeans and linear regression models.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
