@@ -1,11 +1,11 @@
-About r-modeldb
-===============
+About r-modeldb-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-modeldb-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tidymodels/modeldb
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-modeldb-feedstock/blob/main/LICENSE.txt)
 
 Summary: Uses 'dplyr' and 'tidyeval' to fit statistical models inside the database. It currently supports KMeans and linear regression models.
 
