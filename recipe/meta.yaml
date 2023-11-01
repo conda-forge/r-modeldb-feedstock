@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/modeldb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/modeldb/modeldb_{{ version }}.tar.gz
-  sha256: 6f3c05d0520743851f29a9f88f10093639bb12902763224984f11c6a886635b7
+  sha256: df50bc4c8ee584f391e31fbf6ad25fffdf40fa441f7589762d8ccd38927f2f81
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
