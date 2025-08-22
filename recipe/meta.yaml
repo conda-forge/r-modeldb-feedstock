@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/modeldb_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/modeldb/modeldb_{{ version }}.tar.gz
-  sha256: df50bc4c8ee584f391e31fbf6ad25fffdf40fa441f7589762d8ccd38927f2f81
+  sha256: d186053502ccb971ec840e48707c194939d6609134a379f9a4c778fde5bbaab9
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
